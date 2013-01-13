@@ -12,7 +12,7 @@
     <asp:TextBox ID="txtBoxServerURL" runat="server"></asp:TextBox>
     
 
-    <asp:Button runat="server" ID="Button1" Font-Bold="true" Text="Start Test" OnClick="cmdCHeck_Click"
+    <asp:Button runat="server" ID="btn_startTest" Font-Bold="true" Text="Start Test" OnClick="cmdCHeck_Click"
                  style="top: 0px; left: 47px; position: relative; height: 34px; width: 120px;"/>    
 
     <br />
@@ -27,10 +27,18 @@
             <asp:Image runat="server" src="" id="imgConnectionStatus" style="width:30px; height:30px"  alt="Connection Result" width="130"/>
             <br />
     <br />
+    <br />
+    <asp:Label runat="server" ID="lbl_WebServiceResponse" Font-Bold="true" Font-Size="Large" ForeColor="DarkBlue">Web Service Status</asp:Label>                 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                 
+            <asp:Image runat="server" src="" id="imgWebServiceStatus" style="width:30px; height:30px"  alt="Connection Result" width="130"/>
+            <br />
+    <br />
+    <br />
             <asp:Label runat="server" ID="PortStatus" Font-Bold="true" Font-Size="Large" ForeColor="DarkBlue">Port Status</asp:Label>                 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;                 
             <asp:Image runat="server" src="" id="imgPortStatus" style="width:30px; height:30px"  alt="Connection Result" width="130"/>
             <br />
+    <br />
     <br />
             <asp:Label runat="server" ID="LocalFirewall" Font-Bold="true" Font-Size="Large" ForeColor="DarkBlue">Firewall Enabled</asp:Label>                 
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;                 
@@ -45,10 +53,5 @@
 
 </asp:Content>
 <asp:Content ID="Content1" runat="server" contentplaceholderid="HeadContent">
-    <style type="text/css">
-        .auto-style1 {
-            text-decoration: underline;
-        }
-    </style>
-</asp:Content>
+    </asp:Content>
 

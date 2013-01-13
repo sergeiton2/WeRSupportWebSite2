@@ -37,12 +37,18 @@ namespace WebApplication1
             imgPortStatus.Visible = false;
             LocalFirewall.Visible = false;
             imgFirewallStatus.Visible = false;
+            lbl_WebServiceResponse.Visible = false;
+            imgWebServiceStatus.Visible = false;
 
         }
         protected void cmdCHeck_Click(object sender, EventArgs e)
         {
+
+            btn_startTest.Text = "Test Running";
+            btn_startTest.Enabled = false;
             string serverURL = txtBoxServerURL.Text;
             lblMessage.Text = "";
+            bool isPortOpen, isWebServiceAck, isFWEnabled = false;
 
             TestResults.Visible = false;
             ConnectionStatus.Visible = false;
@@ -51,39 +57,62 @@ namespace WebApplication1
             imgPortStatus.Visible = false;
             LocalFirewall.Visible = false;
             imgFirewallStatus.Visible = false;
+            lbl_WebServiceResponse.Visible = false;
+            imgWebServiceStatus.Visible = false;
 
             if (serverURL.Length > 1)
             {
                 lblMessage.Text = "Please wait. Testing connectivity to WeR Server\n";
 
 
-                bool isPingable = isSitePingable(addHttp(serverURL));
+                bool isPingable = isSitePingable(removeHttp(serverURL));
 
                 lblMessage.Text =  lblMessage.Text + "Testing port connectivity to WeR Server\n";
 
-                bool isPortOpen = checkPortConnectivity(removeHttp(serverURL));
+                if (isPingable)
+                {
+                    // Not relevant - We have a test for port response
+                    isWebServiceAck = isWebServiceResponses(addHttp(serverURL));
+                    lblMessage.Text = lblMessage.Text + "Testing WeR web service response to \n";
 
-                lblMessage.Text = "";
+                    isPortOpen = checkPortConnectivity(removeHttp(serverURL));
 
-                bool isFWEnabled = checkFirewall();
+                    lblMessage.Text = "";
+
+                    isFWEnabled = checkFirewall();                    
+                }
+                else
+                {
+                    isWebServiceAck = false;
+                    isPortOpen = false;
+
+                }
+                
 
                 TestResults.Visible = true;
                 ConnectionStatus.Visible = true;
                 PortStatus.Visible = true;
                 imgConnectionStatus.Visible = true;
                 imgPortStatus.Visible = true;
+                lbl_WebServiceResponse.Visible = true;
+                imgWebServiceStatus.Visible = true;
 
                 if (isPingable)
                     imgConnectionStatus.Attributes["src"] = "Images/status_ok1.png";
                 else
                     imgConnectionStatus.Attributes["src"] = "Images/status_error1.jpg";
 
+                if (isWebServiceAck)
+                    imgWebServiceStatus.Attributes["src"] = "Images/status_ok1.png";
+                else
+                    imgWebServiceStatus.Attributes["src"] = "Images/status_error1.jpg";
+
                 if (isPortOpen)
                     imgPortStatus.Attributes["src"] = "Images/status_ok1.png";
                 else
                     imgPortStatus.Attributes["src"] = "Images/status_error1.jpg";
 
-                if (!isPortOpen)
+                if ( isPingable && (!isPortOpen))
                 {
                     LocalFirewall.Visible = true;
                     imgFirewallStatus.Visible = true;
@@ -98,6 +127,9 @@ namespace WebApplication1
             }
             else
                 lblMessage.Text = "Server URL is too short!";
+
+            btn_startTest.Text = "Start Test";
+            btn_startTest.Enabled = true;
         }
 
         
@@ -105,33 +137,41 @@ namespace WebApplication1
         
         public bool isSitePingable(string serverURL)
         {
-            WebClient workstation = new WebClient();
+            var ping = new System.Net.NetworkInformation.Ping();
 
-            byte[] data = null;            
-            try
-            {
-                data = workstation.DownloadData(serverURL);
-            }
-            catch (Exception ex)
-            {
+            var result = ping.Send(serverURL);
+
+            if (result.Status != System.Net.NetworkInformation.IPStatus.Success)
                 return false;
-            }
-
-            if (data != null && data.Length > 0)
-                return true;
             else
-                return false;            
+                return true;
         }
 
+
+
+        public bool isWebServiceResponses(string serverURL)
+        {
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(serverURL);
+            request.AllowAutoRedirect = false; // find out if this site is up and don't follow a redirector
+            request.Timeout = 2000;
+            request.Method = "HEAD";
+            try
+            {
+                var response = request.GetResponse();
+                return true;
+                // do something with response.Headers to find out information about the request
+            }
+            catch (WebException wex)
+            {
+                //set flag if there was a timeout or some other issues
+                return false;
+            }
+        }
 
         public bool checkPortConnectivity(string serverURL)
         {                        
             try
             {
-                // Short version - was not tested
-                //TcpClient tcpClient = new TcpClient();
-                //tcpClient.Connect(serverURL, 43001);
-
                 IPAddress ipa = (IPAddress)Dns.GetHostAddresses(serverURL)[0];
 
                 System.Net.Sockets.Socket sock =

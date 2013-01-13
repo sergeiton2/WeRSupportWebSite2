@@ -31,3 +31,4 @@ C:\Users\sergeito\Desktop\Work\trunk\Netorious\WebApplication1\obj\Release\Inter
 C:\Users\sergeito\Desktop\Work\trunk\Netorious\WebApplication1\obj\Release\WebApplication1.csproj.ResolveComReference.cache
 C:\Users\sergeito\Desktop\Work\trunk\Netorious\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\sergeito\Desktop\Work\trunk\Netorious\WebApplication1\obj\Release\WebApplication1.pdb
+C:\Users\sergeito\Desktop\Work\trunk\Netorious\WebApplication1\obj\Release\WebApplication1.csprojResolveAssemblyReference.cache
