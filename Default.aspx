@@ -21,7 +21,7 @@
         <li class="one">
             <h5>Download client for troubleshooting</h5>
             Click the following link to download WeR Troobleshooting tool to local PC
-            <a href="https://dl.dropbox.com/u/11068976/Radio_Israel.exe">Download</a>
+            <a href="Client/WeRSupportTool.exe">Download</a>
             <br><br><br>
         </li>
         <li class="two">
