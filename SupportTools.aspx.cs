@@ -62,18 +62,18 @@ namespace WebApplication1
 
             if (serverURL.Length > 1)
             {
-                lblMessage.Text = "Please wait. Testing connectivity to WeR Server\n";
+                lblMessage.Text = "Please wait. Testing connectivity to Essence Server\n";
 
 
                 bool isPingable = isSitePingable(removeHttp(serverURL));
 
-                lblMessage.Text =  lblMessage.Text + "Testing port connectivity to WeR Server\n";
+                lblMessage.Text = lblMessage.Text + "Testing port connectivity to Essence Server\n";
 
                 if (isPingable)
                 {
                     // Not relevant - We have a test for port response
                     isWebServiceAck = isWebServiceResponses(addHttp(serverURL));
-                    lblMessage.Text = lblMessage.Text + "Testing WeR web service response to \n";
+                    lblMessage.Text = lblMessage.Text + "Testing Essence web service response \n";
 
                     isPortOpen = checkPortConnectivity(removeHttp(serverURL));
 
@@ -263,7 +263,7 @@ namespace WebApplication1
         {  
             Type type = Type.GetTypeFromProgID(PROGID_OPEN_PORT);  
             INetFwOpenPort port = Activator.CreateInstance(type) as INetFwOpenPort;  
-            port.Name = "WeRServer";
+            port.Name = "EssenceServer";
             port.Port = portno;  
             //port.Scope = scope;  
             port.Protocol = NET_FW_IP_PROTOCOL_.NET_FW_IP_PROTOCOL_TCP;
@@ -289,7 +289,7 @@ namespace WebApplication1
 
             Process netshProgram = new Process();
             netshProgram.StartInfo.FileName = "netsh";
-            netshProgram.StartInfo.Arguments = " advfirewall firewall add rule name=\"WeR-Port\" protocol=TCP dir=out localport=43001 action=allow";
+            netshProgram.StartInfo.Arguments = " advfirewall firewall add rule name=\"Essence-Port\" protocol=TCP dir=out localport=43001 action=allow";
             netshProgram.Start();
 
             return isInvoked;

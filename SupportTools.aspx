@@ -1,4 +1,4 @@
-﻿<%@ Page Title="WeR Support Tool" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="WebApplication1.About" %>
+﻿<%@ Page Title="Essence Support Tool" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SupportTools.aspx.cs" Inherits="WebApplication1.About" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
@@ -7,7 +7,7 @@
 
     <br />
 
-    <asp:Label runat="server" ID="lblCaption" Font-Bold="true" ForeColor="DarkBlue">Enter WeR Site URL:</asp:Label>                 
+    <asp:Label runat="server" ID="lblCaption" Font-Bold="true" ForeColor="DarkBlue">Enter Essence server URL:</asp:Label>                 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="txtBoxServerURL" runat="server"></asp:TextBox>
     

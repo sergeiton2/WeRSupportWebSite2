@@ -38,7 +38,7 @@
         <div class="content-wrapper">
             <div class="float-left">
                 <p class="site-title">
-                    <img src="Images/essence-logo2.png" alt="Essence Group" width="130"/>
+                    <img src="Images/EssenceGroupLogo3.png" alt="Essence Group" width="130"/>
                     <a runat="server" href="~/Images/essence-logo2.png">Essence Group</a>                    
                 </p>
             </div>
@@ -63,7 +63,7 @@
                 <nav>
                     <ul id="menu">
                         <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">About</a></li>
+                        <li><a runat="server" href="~/SupportTools.aspx">Support Tools</a></li>
                         <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                     </ul>
                 </nav>
@@ -79,7 +79,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; <%: DateTime.Now.Year %> - WeR Support Tool</p>
+                <p>&copy; <%: DateTime.Now.Year %> - Essence Group International</p>
             </div>
         </div>
     </footer>
