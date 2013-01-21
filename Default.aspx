@@ -1,14 +1,13 @@
-﻿<%@ Page Title="WeR Support Tools" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1._Default" %>
+﻿<%@ Page Title="Essence Support Tools" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1._Default" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
-                <h1><%: Title %>.</h1>
                 <h2>Welcome to Essence Group Support Center</h2>
             </hgroup>
             <p>
-                To learn more about company solutions, visit <a href="http://www.essence-grp.com/home" title="Essence Security Group Website">Essence Security Group Website</a>.
+                To learn more about company solutions, visit <a href="http://www.essence-grp.com/home" title="Essence Group Website">Essence Group Website</a>.
                 <br><br>
                 If you have any questions about our solutions, send us <a href="mailto:ProfessionalServices@essence-grp.com" title="Email">Email</a>.
             </p>
