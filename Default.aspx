@@ -27,6 +27,13 @@
             <h5>Open Essence Troobleshooting page to check online</h5>
             Open Essence Troobleshooting page to check online.
             <a href="About.aspx">Continue</a>            
+             <br><br><br>
+        </li>        
+        <li class="three">
+            <h5>Download ECOP Real Time Parser</h5>
+            Click the following link to download ECOP Real Time Parser tool to local PC
+            <a href="Client/EcopRealTimeParser.exe">Download</a>
+            <br><br><br>            
         </li>        
     </ol>
 </asp:Content>
