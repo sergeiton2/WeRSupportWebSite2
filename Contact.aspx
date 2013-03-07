@@ -2,49 +2,77 @@
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <hgroup class="title">
-        <h1><%: Title %>.</h1>
-        <h2>Your contact page.</h2>
+        <h1>Contact us</h1>
     </hgroup>
 
     <section class="contact">
-        <header>
-            <h3>Phone:</h3>
-        </header>
+        <h2>Essence Group</h2>        
         <p>
-            <span class="label">Main:</span>
-            <span>425.555.0100</span>
+            12 Abba Eban Avenue</p>
+        <p>
+            Ackerstein Towers Bldg. D</p>
+        <p>
+            Herzliya Pituach</p>
+        <p>
         </p>
         <p>
-            <span class="label">After Hours:</span>
-            <span>425.555.0199</span>
+            P.O. Box 2073<br />
+            Herzliya, 46120<br />
+            Israel</p>
+        <p>
+            &nbsp;</p>
+        <h2><span style="FONT-SIZE: 12pt">Email addresses: </span></h2>
+        <p>
         </p>
+        <table border="0" cellpadding="2" cellspacing="0" width="400">
+            <tr height="22">
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Security</span></td>
+                <td class="auto-style2"><a href="mailto:security@essence-grp.com"><span style="FONT-SIZE: 10pt">security@essence-grp.com</span></a> </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Home &amp; Family</span></td>
+                <td class="auto-style2"><a href="mailto:family@essence-grp.com"><span style="FONT-SIZE: 10pt">family@essence-grp.com</span></a> </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Healthcare</span></td>
+                <td class="auto-style2"><a href="mailto:health@essence-grp.com"><span style="FONT-SIZE: 10pt">health@essence-grp.com</span></a> </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Smart Energy</span></td>
+                <td class="auto-style2"><a href="mailto:energy@essence-grp.com"><span style="FONT-SIZE: 10pt">energy@essence-grp.com</span></a> </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Solar Solutions</span></td>
+                <td class="auto-style2"><a href="mailto:solar@essence-grp.com"><span style="FONT-SIZE: 10pt">solar@essence-grp.com</span></a></td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Essence US Operations</span></td>
+                <td class="auto-style2"><a href="mailto:yaniv@amircs.com" title="essence_us@essence-grp.com">
+                    <div>
+                        <span style="FONT-SIZE: 10pt">info@essence-usa.com</span></div>
+                    </a></td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Career Opportunities</span></td>
+                <td class="auto-style2"><a href="mailto:jobs@essence-grp.com"><span style="FONT-SIZE: 10pt">jobs@essence-grp.com</span></a> </td>
+            </tr>
+            <tr>
+                <td class="auto-style1" height="22"><span style="FONT-SIZE: 10pt">Customer Services</span></td>
+                <td class="auto-style2"><a href="mailto:support@essence-grp.com"><span style="FONT-SIZE: 10pt">support@essence-grp.com</span></a></td>
+            </tr>
+            
+        </table>
+        <p>
+            &nbsp;</p>
     </section>
-
-    <section class="contact">
-        <header>
-            <h3>Email:</h3>
-        </header>
-        <p>
-            <span class="label">Support:</span>
-            <span><a href="mailto:Support@example.com">Support@example.com</a></span>
-        </p>
-        <p>
-            <span class="label">Marketing:</span>
-            <span><a href="mailto:Marketing@example.com">Marketing@example.com</a></span>
-        </p>
-        <p>
-            <span class="label">General:</span>
-            <span><a href="mailto:General@example.com">General@example.com</a></span>
-        </p>
-    </section>
-
-    <section class="contact">
-        <header>
-            <h3>Address:</h3>
-        </header>
-        <p>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399
-        </p>
-    </section>
+</asp:Content>
+<asp:Content ID="Content1" runat="server" contentplaceholderid="HeadContent">
+    <style type="text/css">
+        .auto-style1 {
+            width: 183px;
+        }
+        .auto-style2 {
+            width: 204px;
+        }
+    </style>
 </asp:Content>

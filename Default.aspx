@@ -26,7 +26,7 @@
         <li class="two">
             <h5>Open Essence Troobleshooting page to check online</h5>
             Open Essence Troobleshooting page to check online.
-            <a href="About.aspx">Continue</a>            
+            <a href="SupportTools.aspx">Continue</a>            
              <br><br><br>
         </li>        
         <li class="three">
