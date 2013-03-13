@@ -76,4 +76,3 @@ C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\Interop.
 C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.csproj.ResolveComReference.cache
 C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.dll
 C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.pdb
-C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.csprojResolveAssemblyReference.cache
