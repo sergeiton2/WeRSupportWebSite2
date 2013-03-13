@@ -66,3 +66,14 @@ C:\Users\sergeito\Desktop\Work\trunk\Netorious\WeRSupportWebSite2.git\obj\Releas
 C:\Users\sergeito\Desktop\Work\trunk\Netorious\WeRSupportWebSite2.git\obj\Release\WebApplication1.csproj.ResolveComReference.cache
 C:\Users\sergeito\Desktop\Work\trunk\Netorious\WeRSupportWebSite2.git\obj\Release\WebApplication1.dll
 C:\Users\sergeito\Desktop\Work\trunk\Netorious\WeRSupportWebSite2.git\obj\Release\WebApplication1.pdb
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\bin\WebApplication1.dll
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\bin\WebApplication1.pdb
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\Interop.NATUPNPLib.dll
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\Interop.NETCONLib.dll
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\Interop.NetFwTypeLib.dll
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.csproj.ResolveComReference.cache
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.dll
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.pdb
+C:\Users\sergeito\Desktop\Work\trunk\WeRSupportWebSite2.git\obj\Release\WebApplication1.csprojResolveAssemblyReference.cache
